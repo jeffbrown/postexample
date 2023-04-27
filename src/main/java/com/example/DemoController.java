@@ -24,6 +24,7 @@ public class DemoController {
 
     @Post("/save")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    @Produces(MediaType.TEXT_HTML)
     HttpResponse postSomeData(@Body Person person) {
         LOG.debug("Hello {} {}", person.getFirstName(), person.getLastName());
         return HttpResponse.seeOther(URI.create("/"));
