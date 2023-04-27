@@ -1,0 +1,12 @@
+micronaut:
+  application:
+    name: postexample
+  router:
+    static-resources:
+      assets:
+        paths: 'classpath:assets'
+        mapping: '/assets/**'
+netty:
+  default:
+    allocator:
+      max-order: 3
